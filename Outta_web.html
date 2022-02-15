@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta content="text/html; charset=euc-kr">
+<title>OUTTA_WEB</title>
+    <style>
+        .container{
+        display : grid;
+        grid-template-columns : 1fr;
+        grid-template-rows : 300px auto auto auto auto auto 50px;
+        height : 100%;
+        grid-gap : 20px;
+        grid-template-areas :
+        "header"
+        "slide1"
+        "slide2"
+        "slide3"
+        "slide4"
+        "slide5"
+        "footer";
+        }
+        
+        .header{
+            grid-area : header;
+            border: 5px solid red;
+            padding: 5px;
+            object-fit: none;
+        }
+        .slide1{
+            grid-area : slide1;
+            border: 5px solid red;
+            padding: 50px;
+            
+            display: grid;
+            grid-template-columns: 4fr 5fr;
+        }
+        .slide1_article{
+            margin-left: 40%;
+            margin-right : 5%;            
+        }
+        .slide1_img{
+            margin-left : 5%;
+            margin-right : 40%;
+        }
+        .slide2{
+            grid-area : slide2;
+            border: 5px solid red;
+            padding: 50px;
+        }
+        .slide2_container{
+            display: flex;
+            justify-content: center;
+        }
+        .slide2_item{
+            margin: 10px;
+            
+        }
+        .slide2_item_img{
+            height:40px;
+            width: 40px;
+        }
+        .slide3{
+            grid-area : slide3;
+           border: 5px solid red;
+           padding: 50px;
+        }
+        .slide3_container{
+            display: flex;
+            justify-content: center;
+        }
+        .slide3_item{
+            margin : 30px;
+            position: relative;
+        }
+        .slide4{
+           grid-area : slide4;
+           border: 5px solid red;
+           padding: 50px;
+        }
+        .slide5{
+           grid-area : slide5;
+           border: 5px solid red;
+           padding: 50px;
+        }
+        .footer{
+           grid-area : footer;
+           border: 5px solid red;
+        }
+
+        .font_slide_title{
+            text-align: center;
+            font-size: 25px;
+            color: black;
+            font-weight: bold;
+            margin: 10px;
+        }
+        .font_slide_medium{
+            text-align: center;
+            font-size: 13px;
+            color:rgb(0, 4, 255);
+            font-weight: 900;
+            margin: 10px;
+        }
+        .font_slide_article{
+            text-align: center;
+            font-size: 10px;
+            color: black;
+            font-weight: 600;
+            margin: 10px;
+        }
+        .blue_bar{
+            width: 30px;
+            height : 4px;
+            background-color: rgb(0, 4, 255);
+            margin : 20px;           
+            
+        }
+        .subpic{
+            position: relative;
+        }
+        .imtext_name{
+            position: absolute;
+            top: 180px;
+            left: 20px;
+            z-index: 1;
+            color: white;
+            font-size: 20px;
+            width: 170px;
+        }
+        .imtext_word{
+            position: absolute;
+            top: 220px;
+            left: 20px;
+            z-index: 1;
+            color: white;
+            font-size: 10px;
+            width: 170px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="network.jpeg" height="300px" >
+
+        </div>
+
+        <div class="slide1">
+            <div class = "slide1_article">
+                <div class = "font_slide_title" style="text-align: left;">
+                    ABOUT US
+                </div>
+                <div class = "blue_bar"></div>
+                <div class = "font_slide_medium" style="text-align: left;">
+                    방관할 수 없었던 MIT와 서울대 학생들,<br>
+                    발 벗고 나서다.
+                </div>
+                <div class = "font_slide_article" style="text-align: left;">
+                    왜 꼭 돈이 있어야만 AI 교육을 받을 수 있는 것인가.<br>
+                    세계 1위 공과대학 MIT가 개발한 최고 양질의 AI교육만을<br>
+                </div>
+                <a href="Outta_web_Aboutus.html">
+                    자세히 보기
+                </a>
+            </div>
+            <div class = "slide1_img">
+                <img src = "taycan.webp" width = 140% >
+            </div>
+        </div>
+
+        <div class="slide2">
+            <div class = "font_slide_title">
+                OUR SOLUTIONS
+            </div>
+            <div align="center">
+                <div class = "blue_bar"></div>
+            </div>
+            <div class = "font_slide_article">
+                MIT와 서울대 공대 학생들이 발벗고 나서 만든 자율주행 AI 코딩 교육
+            </div>
+            <div align="center" style="margin: 30px;">
+                <iframe  width="700" height="450" src="https://www.youtube.com/embed/yx5i-5f83TY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="slide2_container">
+                <div class="slide2_item">
+                    <img src="network_icon.jpg" width="100px">
+                    <!-- 이 윗부분 이해 안감. 아래랑 비교하면 class태그로 감싸지 않았을땐 잘 나오는데
+                    감싸버리면 결과물에서 아래 글자들과 겹쳐서 보임-->
+                    
+                    <div class="font_slide_medium">
+                        양질의 교육 컨텐츠
+                    </div>
+                    <div class="font_slide_article">
+                        세계 1위 공과대학 MIT가 개발한<br>
+                        최고 양질의 AI코드 기반 교육
+                    </div>
+                </div>  
+
+                <div class="slide2_item">
+                    <img src="mentor_icon.jpg" width="100px">
+                    <div class="font_slide_medium">
+                        양질의 교육 컨텐츠
+                    </div>
+                    <div class="font_slide_article">
+                        세계 1위 공과대학 MIT가 개발한<br>
+                        최고 양질의 AI코드 기반 교육
+                    </div>
+                </div>  
+                <div class="slide2_item">
+                    <div class="font_slide_medium">
+                        양질의 교육 컨텐츠
+                    </div>
+                    <div class="font_slide_article">
+                        세계 1위 공과대학 MIT가 개발한<br>
+                        최고 양질의 AI코드 기반 교육
+                    </div>
+                </div>  
+                <div class="slide2_item">
+                    <div class="font_slide_medium">
+                        양질의 교육 컨텐츠
+                    </div>
+                    <div class="font_slide_article">
+                        세계 1위 공과대학 MIT가 개발한<br>
+                        최고 양질의 AI코드 기반 교육
+                    </div>
+                </div>  
+
+            </div>
+    
+            
+        </div>
+        
+        <div class="slide3">
+            <div class="font_slide_title">
+                OUR TEAM
+            </div>
+            <div align = "center">
+                <div class="blue_bar"></div>
+            </div>
+            
+            <div class="font_slide_article">
+                대한민국 AI 교육 혁신, 이 멋진 변화를 이끄는 팀 멤버들을 소개합니다.
+            </div>
+
+            <div class = "slide3_container">
+                <div class = "slide3_item">
+                    <img src="faceimage1.jpg" width="200px">
+                    <span class = "imtext_name">김채원</span>
+                    <span class="imtext_word">"세계 최고의 AI 자료에 국내 최고의 진심을 담았습니다."</span>
+                </div>
+                <div class = "slide3_item">
+                    <img src="faceimage2.jpg" width="200px">
+                    <span class = "imtext_name">권은비</span>
+                    <span class="imtext_word">"단순 암기식 공부를 넘어서, 공학을 직접 체험해보는 뜻깊은 경험이 되기를 바랍니다."</span>
+                </div>
+                <div class = "slide3_item">
+                    <img src="faceimage3.jpg" width="200px">
+                    <span class = "imtext_name">김민주</span>
+                    <span class="imtext_word">"여러분 자신의 또 다른 가능성을 발견하는 시간이 되기를 응원합니다."</span>
+                </div>
+            </div>
+            <div>
+                <a href="Outta_web_Team.html">
+                    <div class ="font_slide_medium">모든 팀원 만나보기 -></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="slide4">main</div>
+        <div class="slide5">main</div>
+        <div class="footer">footer</div>
+       </div>
+       
+
+</body>
+</html>
