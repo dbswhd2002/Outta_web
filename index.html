@@ -1,0 +1,372 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta content="text/html; charset=euc-kr">
+<title>OUTTA_WEB</title>
+    <style>
+        .container{
+        display : grid;
+        
+        grid-template-rows : 70px 1080px 758px 758px 758px auto;
+        grid-template-columns: 960px 961px; 
+        height : 100%;
+        
+        grid-template-areas :
+        "navi navi"
+
+        "header header"
+        
+        "slide1_img slide1_text"
+
+        "slide2_text slide2_img"
+        
+        "slide3_img slide3_text"
+
+        "footer footer"
+        }
+
+        .navi{
+            grid-area: navi;
+            position: static;
+            border: 5px solid red;
+            padding: 5px;
+        }
+        .header{
+            grid-area : header;
+            border: 5px solid red;
+            background: #C4C4C4;
+            padding: 5px;
+            object-fit: none;
+        }
+        .footer{
+            grid-area: footer;
+            border: 5px solid red;
+            padding: 5px;
+        }
+        .slide1_text{
+            grid-area: slide1_text;
+            
+            
+            width: 433px; /*961-80-448*/
+            height: 426px; /*758-192-140*/
+            
+            
+            padding: 192px 448px 140px 80px;
+            border: 5px solid red;
+            text-align: right;
+            font-size: 25px;
+            color: black;
+            font-weight: bold;
+
+            display: flex;
+            flex-direction: column;    
+            align-items: flex-end;
+        }
+        .slide1_img{
+            grid-area: slide1_img;
+            position: relative;
+            width: 960px; /* 960-53-450 =457*/
+            height: 758px; /* 758-60-117=581*/
+            
+            border: 5px solid red;
+        }
+        .slide1_img_data{
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            left: 544px;
+            top: 286px;
+            z-index: 1;
+        }
+
+        .slide2_text{
+            grid-area: slide2_text;
+            position: relative;
+            width: 433px; /*961-80-448*/
+            height: 426px; /*758-192-140*/
+            
+            padding: 192px 83px 140px 444px;
+            border: 5px solid red;
+            text-align: left;
+            font-size: 25px;
+            color: black;
+            font-weight: bold;
+
+            display: flex;
+            flex-direction: column;    
+            align-items: flex-start;
+        }
+        .slide2_img{
+            grid-area: slide2_img;
+            position: relative;
+            width: 960px; /* 960-53-450 =457*/
+            height: 758px; /* 758-60-117=581*/
+            border: 5px solid red;
+        }
+
+        .slide3_text{
+            grid-area: slide3_text;
+            width: 433px; /*961-80-448*/
+            height: 426px; /*758-192-140*/
+            padding: 192px 448px 140px 80px;
+            border: 5px solid red;
+            text-align: right;
+            font-size: 25px;
+            color: black;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;    
+            align-items: flex-end;
+        }
+        .slide3_img{
+            grid-area: slide3_img;
+            position: relative;
+            width: 960px; /* 960-53-450 =457*/
+            height: 758px; /* 758-60-117=581*/
+            border: 5px solid red;
+        }
+    
+        .font_slide_title{
+            font-family: Noto Sans KR;
+            font-weight: 800;
+            font-style: normal;
+            line-height: 36px;
+            font-size: 65px;
+            color: black;
+            
+        }
+        .font_slide_medium{
+            font-family: Noto Sans KR;
+            font-weight: 500;
+            font-style: normal;
+            line-height: 36px;
+            font-size: 24px;
+            color: black;
+        }
+        .font_slide_article{
+            
+            font-family: Noto Sans KR;
+            font-weight: 500;
+            font-style: normal;
+            line-height: 36px;
+            font-size: 18px;
+            color: black;
+        }
+        .font_slide_minititle{
+            position: absolute;
+            width: 140px; 
+            height: 26px;
+            left: 450px;
+            top: 60px;
+
+            font-family: Noto Sans KR;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 26px;
+            color: #4558FF;
+        }
+        .seemore_button{
+            width: 259px;
+            height: 61px;
+            background: white;
+            border-radius: 40px;
+            border: 5px solid;
+            color: #4558FF;
+            text-align: center; /* 가로 가운데 정렬 */
+
+            font-family: Noto Sans KR;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 61px; /* 이 값을 버튼의 height와 일치시켜 세로로 가운데 정렬 */
+        }
+    </style>
+
+    <script>
+        function mover1(){
+            var m;
+            m = document.getElementsByClassName("slide1_img_data")[0];
+            m.style.backgroundImage = "url('img/프로그램 일러-1.png')";
+        }
+        function mout1(){
+            var m;
+            m = document.getElementsByClassName("slide1_img_data")[0];
+            m.style.backgroundImage = "url('img/프로그램 일러.png')";
+        }
+        function mover_join(){
+            var m;
+            m = document.getElementsByClassName("seemore_button")[0];
+            m.style.background = "#4558FF";
+            m.style.color = "white";
+        }
+        function mout_join(){
+            var m;
+            m = document.getElementsByClassName("seemore_button")[0];
+            m.style.background = "white";
+            m.style.color = "#4558FF";
+        }
+             
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="navi"></div>
+        <div class="header">header</div>
+        
+            <div class="slide1_img" onmouseover="mover1()" onmouseout="mout1()">
+            
+                <div style="position: absolute;">
+                    
+                    <!-- 아래 img들을 absolute로 하고 싶은데 slide1_img는 static이어야 해서-->
+                    <!-- 그런데 알고보니 이럴 필요 없더라. slide2_text, slide3_img 참조.
+                    slide1_img의 position을 static(기본설정)
+                    에서 relative(값들은 다 0.)으로 하면 변화는 없는데 static이 아니니
+                    아래 이미지들이랑 whatwedo class가 absolute 으로 위치잘 정의됨. -->
+    
+                    <div class="font_slide_minititle">
+                    WHAT WE DO
+                    </div>
+    
+                    <div class="slide1_img_data"></div> 
+    
+                     <!-- 원 -->
+                    <div style="
+                    position: absolute;
+                    width: 449px;
+                    height: 449px;
+                    border-radius: 224.5px;
+                    left: 450px;
+                    top: 192px;
+                    background: #ECEEFF;
+                    ">                
+                </div>
+                </div>
+                                
+            </div>
+            <div class="slide1_text" onmouseover="mover1()" onmouseout="mout1()">
+                <!-- column 방향 flex로-->
+    
+                <div class="font_slide_title" style="height: 68px;">
+                    Program
+                </div>
+                <div style="height: 12.63px;"><br></div>
+                <div class="font_slide_medium" style="height: 35px;">
+                    인공지능 경진대회
+                </div>
+                <div style="height: 178px;"><br></div>
+                <div class="font_slide_article" style="height: 64px;">
+                    Face & Speech Recognition 기술을 이용해<br>
+                    유쾌한 아이디어를 직접 코딩을 통해 구현하는 대회
+                </div>
+                <div style="height: 25px;"><br></div>
+                <div class = "seemore_button" onmouseover="mover_join()" onmouseout="mout_join()">
+                    지원하기
+                </div>
+            </div>    
+        
+        
+        <div class="slide2_img">
+            <img src="책 일러.png" style="
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            left: 206px;
+            top: 286px;
+            z-index: 1;
+            ">
+
+            <!-- 원 -->
+            <div style="
+            position: absolute;
+            width: 449px;
+            height: 449px;
+            border-radius: 224.5px;
+            left: 111px;
+            top: 192px;
+            background: #ECEEFF;
+            ">                   
+        </div>
+            
+            
+            
+        </div>
+        <div class="slide2_text">
+            <!-- column 방향 flex로-->
+
+            <div class="font_slide_minititle" >
+                WHAT WE DO
+            </div>
+
+            <div class="font_slide_title" style="height: 68px;">
+                Book
+            </div>
+            <div style="height: 12.63px;"><br></div>
+            <div class="font_slide_medium" style="height: 35px;">
+                OUTTA에서만 볼 수 있는 책
+            </div>
+            <div style="height: 178px;"><br></div>
+            <div class="font_slide_article" style="height: 64px;">
+                'Autonomous Cognitive Assistance'를<br>
+                python으로 개발하는데 도움되는 교육 자료
+            </div>
+            <div style="height: 25px;"><br></div>
+            <div class = "seemore_button">
+                지원하기
+            </div>
+        </div>
+
+        <div class="slide3_img">
+            <div class="font_slide_minititle">
+                WHAT WE DO
+            </div>
+            <img src="자료실 일러.png" style="
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            left: 544px;
+            top: 286px;
+            z-index: 1;
+            ">
+
+            <!-- 원 -->
+            <div style="
+            position: absolute;
+            width: 449px;
+            height: 449px;
+            border-radius: 224.5px;
+            left: 450px;
+            top: 192px;
+            background: #ECEEFF;
+            ">                
+        </div>
+        
+            
+            
+
+            
+        </div>
+        <div class="slide3_text">
+            <!-- column 방향 flex로-->
+
+            <div class="font_slide_title" style="height: 68px;">
+                Resource
+            </div>
+            <div style="height: 12.63px;"><br></div>
+            <div class="font_slide_medium" style="height: 35px;">
+                OUTTA에서만 볼 수 있는 자료실
+            </div>
+            <div style="height: 178px;"><br></div>
+            <div class="font_slide_article" style="height: 64px;">
+                교재 연습 문제 해결에 필요한<br>
+                데이터셋 파일과 스켈레톤 코드 저장소
+            </div>
+            <div style="height: 25px;"><br></div>
+            <div class = "seemore_button">
+                지원하기
+            </div>
+        </div>
+    </div>
+</body>
+</html>
